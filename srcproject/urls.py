@@ -27,7 +27,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('blog/' , post_list ),
     path('blog/create' , post_create ),
-    path('blog/<int:id>' , post_detail),
+    path('blog/<int:id>/' , post_detail),
 ]
 
 urlpatterns +=static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
