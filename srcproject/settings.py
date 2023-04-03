@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'posts'
+    'posts',
+    'postcbv',
     
 ]
 
@@ -59,7 +60,7 @@ ROOT_URLCONF = 'srcproject.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR /"posts\Template"],
+        'DIRS': [BASE_DIR /"postcbv\Template"],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
