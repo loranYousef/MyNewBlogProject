@@ -20,8 +20,8 @@ def post_create(request):
         form = PostForm(request.POST,request.FILES)
         if form.is_valid():
             form.save()
-    
-    form =PostForm()
+    else:
+        form =PostForm()
     return render(request,'create.html',{'form':form})
 
 
