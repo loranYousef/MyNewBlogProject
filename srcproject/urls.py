@@ -17,7 +17,7 @@ from django.contrib import admin
 from django .conf import settings
 from django.conf.urls.static import static
 from django.urls import path, include
-from posts.views import post_list ,post_create ,post_detail
+from posts.views import post_list ,post_create ,post_detail, edit_post
 
 
 
@@ -28,6 +28,7 @@ urlpatterns = [
     path('blog/' , post_list ),
     path('blog/create' , post_create ),
     path('blog/<int:id>/' , post_detail),
+    path('blog/<int:id>/edit' , edit_post),
 ]
 
 urlpatterns +=static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
