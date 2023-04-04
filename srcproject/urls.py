@@ -17,8 +17,8 @@ from django.contrib import admin
 from django .conf import settings
 from django.conf.urls.static import static
 from django.urls import path, include
-#from posts.views import post_list ,post_create ,post_detail, edit_post , delete_post
-from postcbv.views import PostList , PostDetail , PostCreate ,PostEdit , PostDelete
+from posts.views import post_list ,post_create ,post_detail, edit_post , delete_post
+# from postcbv.views import PostList , PostDetail , PostCreate ,PostEdit , PostDelete
 
 
 
@@ -26,17 +26,17 @@ from postcbv.views import PostList , PostDetail , PostCreate ,PostEdit , PostDel
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    #path('blog/' , post_list ),
-    #path('blog/create' , post_create ),
-   # path('blog/<int:id>/' , post_detail),
-   # path('blog/<int:id>/edit' , edit_post),
-   # path('blog/<int:id>/delete' , delete_post),
+    path('blog/' , post_list ),
+    path('blog/create' , post_create ),
+    path('blog/<int:id>/' , post_detail),
+    path('blog/<int:id>/edit' , edit_post),
+    path('blog/<int:id>/delete' , delete_post),
 
-   path('blog/' , PostList.as_view()),
-   path('blog/<int:pk>/' , PostDetail.as_view()),
-   path('blog/create' , PostCreate.as_view() ),
-   path('blog/<int:pk>/edit' , PostEdit.as_view()),
-   path('blog/<int:pk>/delete' , PostDelete.as_view()),
+#    path('blog/' , PostList.as_view()),
+#    path('blog/<int:pk>/' , PostDetail.as_view()),
+#    path('blog/create' , PostCreate.as_view() ),
+#    path('blog/<int:pk>/edit' , PostEdit.as_view()),
+#    path('blog/<int:pk>/delete' , PostDelete.as_view()),
    
 
 

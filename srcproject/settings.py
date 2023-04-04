@@ -60,7 +60,7 @@ ROOT_URLCONF = 'srcproject.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR /"postcbv\Template"],
+        'DIRS': [BASE_DIR /"posts\Template"],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
